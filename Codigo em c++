@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+  int d1, d2, d3, d4, NumConta, Soma, Mult, Sub, DigVer;
+  cout << "Digite o numero da conta na qual possui 4 digitos:";
+  cin >> NumConta;
+
+  ///Separar os digitos
+  d1 =  NumConta/1000;
+  d2 = (NumConta%1000)/100;
+  d3 = (NumConta%100)/10;
+  d4 = NumConta%10;
+
+  ///Somar os digitos
+  Soma = d1 + d2 + d3 + d4;
+
+  ///Multiplicar os 4 digitos
+  Mult = d1 * d2 * d3 * d4;
+
+  ///Subtração
+  Sub = Mult - Soma;
+
+  ///Digito verificador
+  DigVer = Sub%9;
+  cout<< "Digito Verificador= " << DigVer;
+    return 0;
+}
